@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  flask-appdev:
+    image: freedafrancis/devflask-app:latest
+    container_name: flask-appdev
+    networks:
+      - flasknet
+    restart: always
+    ports:
+      - "80:5000"
+networks:
+  flasknet:
